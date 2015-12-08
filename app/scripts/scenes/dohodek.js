@@ -12,7 +12,7 @@ function animateDohodkovnaSlider(thevalue, i) {
         $('.bar-dohodkovna-left .bar-top .value').text(thevalue);
         $('.bar-dohodkovna-left .bar-histogram').css('height', Math.round((315.0 / (thevalue + 1.0)) * thevalue));
 
-        $('.bar-dohodkovna-right .bar-top .value').text(100 - thevalue);
+        $('.bar-dohodkovna-right .bar-top .value').text(1);
         $('.bar-dohodkovna-right .bar-histogram').css('height', Math.round(315.0 / (thevalue + 1.0)));
 
         animateBarTop();
