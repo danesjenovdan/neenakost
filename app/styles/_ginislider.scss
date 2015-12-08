@@ -1,0 +1,32 @@
+.ginislider {
+    height: 15px;
+    width: 100%;
+
+    background-color: $white;
+
+    position: relative;
+
+    margin-top: -20px;
+}
+
+.ginipoint {
+    width: 25px;
+    height: 20px;
+
+    position: absolute;
+    bottom: -9px;
+
+    background-image: url('../images/trikotnik_empty.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+.ginipoint.active, .ginipoint:hover {
+    background-image: url('../images/trikotnik_full.png');
+}
+
+.bar-bottom-gini {
+    // bottom: -20px !important;
+    font-size: 13px;
+}

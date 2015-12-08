@@ -1,0 +1,106 @@
+
+.buttons {
+    width: 100%;
+    height: 53px;
+    overflow: hidden;
+
+    margin-top: 30px;
+}
+
+.thebutton {
+    background: $light-green;
+    box-shadow: 3px 3px 0 $dark-green;
+    color: $dark-blue;
+    text-transform: uppercase;
+    width: 160px;
+    height: 50px;
+    position: relative;
+    margin: auto;
+    font-size: 18px;
+    font-family: $bold;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.thebutton:hover {
+    box-shadow: 0 0 0 $dark-green;
+    top: 2px;
+    left: 2px;
+}
+
+.thebackbutton {
+    float: left;
+}
+.theforwardbutton {
+    float: right;
+}
+
+.thesocialbutton {
+    background-color: $light-blue;
+    color: $light-green;
+    border: 2px solid $light-green;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    overflow: hidden;
+
+    .zavesa {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        text-transform: uppercase;
+        line-height: 42px;
+        background-color: $light-blue;
+        text-align: center;
+        font-size: 18px;
+        font-family: $regular;
+    }
+    .vsebina {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        .toshare {
+            width: 30%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .fbtoshare {
+            background-image: url('../images/fbnoshadow.png');
+        }
+        .fbtoshare:hover {
+            background-image: url('../images/fbnoshadow_hover.png');
+        }
+        .twtoshare {
+            background-image: url('../images/twnoshadow.png');
+        }
+        .twtoshare:hover {
+            background-image: url('../images/twnoshadow_hover.png');
+        }
+        .emailtoshare {
+            background-image: url('../images/emailnoshadow.png');
+        }
+        .emailtoshare:hover {
+            background-image: url('../images/emailnoshadow_hover.png');
+        }
+
+    }
+
+}
+.thesocialbutton:hover {
+    .zavesa {
+        top: -50px;
+        bottom: 50px;
+    }
+}

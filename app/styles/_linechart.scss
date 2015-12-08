@@ -1,0 +1,31 @@
+.linechartcontainer {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.line-legend {
+    background-color: rgba(24, 38, 72, 0.6);
+    color: $white;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    z-index: 30;
+}
+.line-legend > div > div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.line-legend .words {
+    line-height: 20px;
+    width: 200px;
+    margin: 0;
+    padding-left: 5px;
+    top: -5px;
+    position: relative;
+}
+
+.legendacontainer {
+    z-index: 30;
+}

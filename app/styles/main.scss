@@ -1,0 +1,84 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+@import 'variables';
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900&subset=latin,latin-ext);
+
+body {
+    font-family: $regular;
+    background-color: $light-blue;
+
+    padding-top: 70px; // for header
+    // padding-bottom: 130px; // for footer
+}
+
+h1 {
+    color: $light-green;
+    font-size: 24px;
+    font-family: $bold;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    @extend h1;
+    font-size: 18px;
+}
+
+p {
+    color: $white;
+    font-size: 14px;
+    font-family: $regular;
+    text-align: center;
+}
+
+.content-container {
+    background-color: $light-blue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+// gini //
+.giniimage {
+    width: 100%;
+    height: 180px;
+    text-align: center;
+
+    img {
+        display: inline-block;
+    }
+}
+
+.col-md-4:first-of-type .giniimage {
+    padding-top: 38px;
+}
+
+// end gini //
+
+.content-image {
+    text-align: center;
+
+    img {
+        display: inline-block;
+    }
+}
+
+@import 'header';
+@import 'buttons';
+@import 'content-first';
+@import 'maps';
+@import 'linechart';
+@import 'ginislider';
+@import 'barchart';
+@import 'footer';

@@ -1,0 +1,235 @@
+.chartcontainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+
+    h2 {
+        position: relative;
+        top: 100px;
+    }
+
+    .chartlabel {
+        width: 50%;
+        left: 25%;
+        padding: 0;
+        line-height: 1.4em;
+
+        position: absolute;
+    }
+}
+
+.barcontainer {
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    height: 375px;
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .icon-99 {
+        background-image: url(../images/99percent.png);
+    }
+
+    .icon-1 {
+        background-image: url(../images/1percent.png);
+    }
+
+    .bar {
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+        width: 100px;
+        height: 375px;
+    }
+
+    .bar-top {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bar-bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bar-histogram {
+        width: 100px;
+        height: 157.5px;
+        position: absolute;
+        bottom: 35px;
+    }
+}
+.barcontainer-left {
+    float: left;
+
+    .icon {
+        position: absolute;
+        left: 10px;
+        bottom: 21px;
+    }
+
+    .bar {
+        left: 80px;
+    }
+
+    .bar-histogram {
+        background-color: $red;
+    }
+}
+.barcontainer-right {
+    float: right;
+
+    .icon {
+        position: absolute;
+        right: 10px;
+        bottom: 30px;
+    }
+
+    .bar {
+        right: 80px;
+    }
+
+    .bar-histogram {
+        background-color: $light-green;
+    }
+}
+
+.bar-histogram-green {
+    background-color: $light-green !important;
+}
+
+.slider-container {
+    width: 50%;
+
+    position: absolute;;
+    left: 25%;
+    top: 370px;
+}
+.slider.slider-horizontal {
+    width: 100%;
+}
+.slider-selection {
+    background: $red;
+}
+.slider-track-high {
+    background: $light-green;
+}
+.slider-handle {
+    background: $white;
+}
+.slider-container.noball {
+    .slider-selection {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .slider-track-high {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .slider-handle {
+        display: none;
+    }
+}
+
+// end porazdelitev premoženja //
+
+// dohodkovna neenakost //
+.dohodkovna-primerjalno, .content-gini-primerjalno, .content-dohodkovna-primerjalno, .content-slovenija-gini {
+    .barcontainer {
+        position: relative;
+        float: left;
+        width: 8.5%;
+        margin-right: 0.5%;
+    }
+    .bar {
+        max-width: 100%;
+    }
+    .bar-histogram {
+        background-color: $red;
+        max-width: 100%;
+    }
+}
+// end dohodkovna neenakost //
+
+.chartcontainer-dohodkovna-primerjalno {
+
+    .barcontainer {
+        $barwidth: percentage(1/7);
+
+        width: $barwidth;
+        margin-left: $barwidth/12;
+        margin-right: $barwidth/12;
+        // margin-left: (100 / 11 / 2)%;
+        // margin-right: (100 / 11 / 2)%;
+
+        .bar, .bar-histogram {
+            width: 100%;
+        }
+
+        .bar-bottom {
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.chartcontainer-gini-primerjalno {
+
+    .barcontainer {
+        $barwidth: percentage(1/7);
+
+        width: $barwidth;
+        margin-left: $barwidth/12;
+        margin-right: $barwidth/12;
+        // margin-left: (100 / 11 / 2)%;
+        // margin-right: (100 / 11 / 2)%;
+
+        .bar, .bar-histogram {
+            width: 100%;
+        }
+
+        .bar-bottom {
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.content-slovenija-gini {
+
+    .barcontainer {
+        $barwidth: percentage(1/13);
+
+        width: $barwidth;
+        margin-left: $barwidth/13;
+        margin-right: $barwidth/13;
+        // margin-left: (100 / 11 / 2)%;
+        // margin-right: (100 / 11 / 2)%;
+
+        .bar, .bar-histogram {
+            width: 100%;
+        }
+
+        .bar-bottom {
+            text-transform: uppercase;
+        }
+
+        .bar {
+            height: 0px;
+        }
+        .bar-visible {
+            height: 100%;
+        }
+    }
+
+}

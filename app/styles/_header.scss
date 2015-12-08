@@ -1,0 +1,65 @@
+.header {
+    height: 62px;
+    border: 1px solid $black;
+    background-color: $dark-blue;
+    font-family: $bold;
+    position: fixed;
+    top: 0;
+
+    z-index: 100;
+}
+
+.header > div {
+    display: inline-block;
+}
+
+.menuitem {
+    background-color: $dark-blue;
+    color: $light-green;
+    text-shadow: 3px 2px 0 $dark-green;
+    height: 60px;
+    width: 250px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 60px;
+    position: relative;
+    top: -26px;
+    cursor: pointer;
+    padding-left: 55px;
+    background-repeat: no-repeat;
+}
+
+.menuitem.active,
+.menuitem:hover {
+    background-color: $light-blue;
+}
+
+.menuitem-prase {
+    background-image: url(../images/prase.png);
+    background-position: 15px center;
+}
+
+.menuitem-kesh {
+    background-image: url(../images/kesh.png);
+    background-position: 15px center;
+}
+
+.menuitem-zastava {
+    background-image: url(../images/zastava.png);
+    background-position: 15px center;
+}
+
+.menuitem-resitve {
+    background-image: url(../images/resitve.png);
+    background-position: 15px center;
+}
+
+.logo {
+    background-color: $black;
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
