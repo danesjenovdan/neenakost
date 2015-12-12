@@ -7,6 +7,14 @@ var ispopoveropen = false;
 
 $(document).ready(function () {
 
+    $('.logo').on('click', function() {
+        $('.landing').removeClass('hidden')
+        $('.landing').next().addClass('hidden')
+        $('.landing').next().next().addClass('hidden');
+
+        window.history.pushState('object or string', 'home', '/');
+    });
+
     $('.thelandingbutton').on('click', function () {
         $('.landing').addClass('hidden')
         $('.landing').next().removeClass('hidden')
