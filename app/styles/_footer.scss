@@ -93,3 +93,47 @@
 }
 
 // END FOOTER //
+
+.footer-new {
+    border-top: 1px solid $light-green;
+    margin-top: 50px;
+    height: 30px;
+}
+
+.djndlogo {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 18px;
+    color: $light-green;
+    text-transform: uppercase;
+    font-family: 'Titillium Web';
+
+    cursor: pointer;
+}
+.osflogo {
+    width: 107px;
+    height: 25px;
+
+    position: absolute;
+    right: 100px;
+    top: 15px;
+
+    background-image: url('../images/osflogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.idslogo {
+    width: 67px;
+    height: 45px;
+
+    position: absolute;
+    right: 220px;
+    top: 15px;
+
+    background-image: url('../images/idslogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
