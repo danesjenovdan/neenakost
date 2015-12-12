@@ -2,6 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
 // endbower
 .browsehappy {
     margin: 0.2em 0;
@@ -9,16 +10,15 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
     color: #000;
     padding: 0.2em 0;
 }
-
 @import 'variables';
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:900&subset=latin,latin-ext);
 
 body {
     font-family: $regular;
     background-color: $light-blue;
-
     padding-top: 70px; // for header
-    // padding-bottom: 130px; // for footer
+
+// padding-bottom: 130px; // for footer
 }
 
 h1 {
@@ -27,7 +27,6 @@ h1 {
     font-family: $bold;
     text-align: center;
     text-transform: uppercase;
-
     margin-bottom: 20px;
 }
 
@@ -38,7 +37,7 @@ h2 {
 
 p {
     color: $white;
-    font-size: 14px;
+    font-size: 16px;
     font-family: $regular;
     text-align: center;
 }
@@ -69,7 +68,6 @@ p {
 }
 
 // end gini //
-
 .content-image {
     text-align: center;
 
@@ -81,9 +79,13 @@ p {
 // .containerforcontent {
 //     max-width: 550px;
 // }
-
+.content {
+    p {
+        max-width: 600px;
+        margin: auto;
+    }
+}
 @import 'landing';
-
 @import 'header';
 @import 'buttons';
 @import 'content-first';

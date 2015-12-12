@@ -10,6 +10,17 @@
     h1 {
         text-transform: uppercase;
     }
+
+    .col-md-4 {
+        .img-responsive {
+            margin: auto;
+        }
+    }
+
+    .col-md-8 p {
+        margin-left: 0;
+        max-width: 1000px;
+    }
 }
 
 .leftalign {
