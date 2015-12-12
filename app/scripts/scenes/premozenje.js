@@ -24,7 +24,7 @@ function animateSlider(thevalue, i) {
 
 // premozenje linechart
 var linechartdata = {
-    labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+    labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
     datasets: [
         {
             label: "Spodnjih 99%",
@@ -34,7 +34,7 @@ var linechartdata = {
             pointStrokeColor: '#ca485a',
             pointHighlightFill: '#ca485a',
             pointHighlightStroke: '#ca485a',
-            data: [58, 56, 55, 53.5, 52, 50, 46, 40, 35, 30, 28]
+            data: [51.3, 51.6, 53.1, 53.7, 53.7, 53.1, 53.9, 55.3, 55.8, 56, 55.6, 55, 54, 52.3, 51.74, 50.73, 49.72, 48.71, 47.7, 46.69, 45.68]
         },
         {
             label: "Zgornjih 1%",
@@ -44,7 +44,7 @@ var linechartdata = {
             pointStrokeColor: '#71d079',
             pointHighlightFill: '#71d079',
             pointHighlightStroke: '#71d079',
-            data: [20, 25, 31, 35, 38, 42, 47, 51, 56, 60, 66]
+            data: [48.7, 48.4, 46.9, 46.3, 46.3, 46.9, 46.1, 44.7, 44.2, 44, 44.4, 45, 46, 47.7, 48.26, 49.27, 50.28, 51.29, 52.3, 53.31, 54.32]
         }
     ]
 };
@@ -86,16 +86,183 @@ var mapDataEmpty = {}
 
 var mapNames = {
     'BD': 'Bangladeš',
-    'GM': 'Gambija',
-    'SD': 'Sudan',
-    'IQ': 'Irak',
-    'PK': 'Pakistan',
-    'SO': 'Somalija',
-    'NG': 'Nigerija',
-    'ER': 'Eritreja',
-    'AF': 'Afganistan',
-    'SY': 'Sirija'
-} // TODO naredi seznam iz tega za prevajanje
+    'BE': 'Belgija',
+    'BF': 'Burkina Faso',
+    'BG': 'Bolgarija',
+    'BA': 'Bosna in Hercegovina',
+    'BN': 'Brunej',
+    'BO': 'Bolivija',
+    'JP': 'Japonska',
+    'BI': 'Burundi',
+	'BT': 'Butan',
+	'JM': 'Jamajka',
+	'BW': 'Bocvana',
+	'BR': 'Brazilija',
+	'BS': 'Bahami',
+	'BY': 'Belorusija',
+	'BZ': 'Belize',
+	'RU': 'Rusija',
+	'RW': 'Ruanda',
+	'RS': 'Srbija',
+	'TL': 'Timor-Leste',
+	'TM': 'Turkmenistan',
+	'TJ': 'Tadžikistan',
+	'RO': 'Romunija',
+	'GW': 'Gvineja Bissau',
+	'GT': 'Gvatemala',
+	'GR': 'Grčija',
+	'GQ': 'Ekvatorialna Gvineja',
+	'GY': 'Gvajana',
+	'GE': 'Gruzija',
+	'GB': 'Velika Britanija',
+	'GA': 'Gabon',
+	'GN': 'Gvineja',
+	'GM': 'Gambija',
+	'GL': 'Grenlandija',
+	'GH': 'Gana',
+	'OM': 'Oman',
+	'TN': 'Tunizija',
+	'JO': 'Jordan',
+	'HR': 'Hrvaška',
+	'HT': 'Haiti',
+	'HU': 'Madžarska',
+	'HN': 'Honduras',
+	'PR': 'Portoriko',
+	'PS': 'Palestina',
+	'PT': 'Portugalska',
+	'PY': 'Paragvaj',
+	'PA': 'Panama',
+	'PG': 'Papua Nova Gvineja',
+	'PE': 'Peru',
+	'PK': 'Pakistan',
+	'PH': 'Filipini',
+	'PL': 'Poljska',
+	'ZM': 'Zambija',
+	'EH': 'Zahodna Sahara',
+	'EE': 'Estonija',
+	'EG': 'Egipt',
+	'ZA': 'Republika Južna Afrika',
+	'EC': 'Ekvador',
+	'IT': 'Italija',
+	'VN': 'Vietnam',
+	'SB': 'Salomonovi otoki',
+	'ET': 'Etiopija',
+	'SO': 'Somalija',
+	'ZW': 'Zimbabve',
+	'ES': 'Španija',
+	'ER': 'Eritreja',
+	'ME': 'Črna gora',
+	'MD': 'Moldavija',
+	'MG': 'Madagaskar',
+	'MA': 'Maroko',
+	'UZ': 'Uzbekistan',
+	'MM': 'Mjanmar',
+	'ML': 'Mali',
+	'MN': 'Mongolija',
+	'MK': 'Makedonija',
+	'MW': 'Malavi',
+	'MR': 'Mavretanija',
+	'UG': 'Uganda',
+	'MY': 'Malezija',
+	'MX': 'Mehika',
+	'IL': 'Izrael',
+	'FR': 'Francija',
+	'XS': 'Somalilandija',
+	'FI': 'Finska',
+	'FJ': 'Fidži',
+	'FK': 'Falklandski otoki',
+	'NI': 'Nikaragva',
+	'NL': 'Nizozemska',
+	'NO': 'Norveška',
+	'NA': 'Namibija',
+	'VU': 'Vanuatu',
+	'NC': 'Nova Kaledonija',
+	'NE': 'Niger',
+	'NG': 'Nigerija',
+	'NZ': 'Nova Zelandija',
+	'NP': 'Nepal',
+	'XK': 'Kosovo',
+	'CI': 'Slonokoščena obala',
+	'CH': 'Švica',
+	'CO': 'Kolumbija',
+	'CN': 'Kitajska',
+	'CM': 'Kamerun',
+	'CL': 'Čile',
+	'XC': 'Severni Ciper',
+	'CA': 'Kanada',
+	'CG': 'Kongo',
+	'CF': 'Srednjeafriška Republika',
+	'CD': 'Demokratična Republika Kongo',
+	'CZ': 'Češka',
+	'CY': 'Ciper',
+	'CR': 'Kostarika',
+	'CU': 'Kuba',
+	'SZ': 'Kraljevina Svazi',
+	'SY': 'Sirija',
+	'KG': 'Kirgizistan',
+	'KE': 'Kenija',
+	'SS': 'Južni Sudan',
+	'SR': 'Surinam',
+	'KH': 'Kambodža',
+	'SV': 'Republika Salvador',
+	'SK': 'Slovaška',
+	'KR': 'Koreja',
+	'SI': 'Slovenija',
+	'KP': 'Severna Koreja',
+	'KW': 'Kuvajt',
+	'SN': 'Senegal',
+	'SL': 'Sierra Leone',
+	'KZ': 'Kazahstan',
+	'SA': 'Saudova Arabija',
+	'SE': 'Švedska',
+	'SD': 'Sudan',
+	'DO': 'Dominikanska republika',
+	'DJ': 'Džibuti',
+	'DK': 'Danska',
+	'DE': 'Nemčija',
+	'YE': 'Jemen',
+	'DZ': 'Alžirija',
+	'US': 'Združene Države Amerike',
+	'UY': 'Urugvaj',
+	'LB': 'Libanon',
+	'LA': 'Laos',
+	'TW': 'Tajvan',
+	'TT': 'Trinidad in Tobago',
+	'TR': 'Turčija',
+	'LK': 'Šrilanka',
+	'LV': 'Latvija',
+	'LT': 'Litva',
+	'LU': 'Luksemburg',
+	'LR': 'Liberija',
+	'LS': 'Lesoto',
+	'TH': 'Tajska',
+	'TF': 'Francoske južne in antarktične dežele',
+	'TG': 'Togo',
+	'TD': 'Čad',
+	'LY': 'Libija',
+	'AE': 'Združeni arabski emirati',
+	'VE': 'Venezuela',
+	'AF': 'Afganistan',
+	'IQ': 'Irak',
+	'IS': 'Islandija',
+	'IR': 'Iran',
+	'AM': 'Armenija',
+	'AL': 'Albanija',
+	'AO': 'Angola',
+	'AR': 'Argentina',
+	'AU': 'Avstralija',
+	'AT': 'Avstrija',
+	'IN': 'Indija',
+	'TZ': 'Tanzanija',
+	'AZ': 'Azerbajdžan',
+	'IE': 'Irska',
+	'ID': 'Indonezija',
+	'UA': 'Ukrajina',
+	'QA': 'Katar',
+	'MZ': 'Mozambik'
+}
+var truecountries = ['AO', 'BS', 'BZ', 'BN', 'US', 'DO', 'MY', 'LU', 'CN', 'PT', 'NL', 'CH', 'VU'];
+
 var mapNamesEmpty = {}
 
 
@@ -111,11 +278,19 @@ function animateBarTop() {
 
 function setUpPremozenje() {
 
+    $('.content-first-premozenje').removeClass('hidden');
+    $('.content-premozenje-slider').addClass('hidden');
+    $('.content-premozenje-linechart').addClass('hidden');
+    $('.content-premozenje-oaze').addClass('hidden');
+
     animateBarTop();
 
     // $('.mapcontainer').width($('.mapcontainer').parent().width());
 
     premozenjefaza = 0;
+    $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+    $('.premozenjeslider').parent().removeClass('noball');
+    $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)?');
 
     // set up slider
     var premozenjeslider = $('.premozenjeslider').slider().on('slide', function (event) {
@@ -130,17 +305,9 @@ function setUpPremozenje() {
 
     });
 
-    // set up mapoverlay anchors
-    // $('.mapoverlay').on('click', '.mapoverlaycountry', function() {
-    //
-    //     var regions = zemljevid.getSelectedRegions();
-    //     regions.push($(this).data('country-code'))
-    //
-    //     zemljevid.setSelectedRegions(regions);
-    //
-    //     return false;
-    // });
+}
 
+function setUpPremozenjeButtons() {
     // set up next button
     $('.thepremozenjebutton').on('click', function () {
 
@@ -156,16 +323,25 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 1:
 
                 var startvalue = $('.premozenjeslider').slider('getValue');
-                var endvalue = 51.9; // control left histogram
+                var endvalue = 51; // control left histogram
 
                 // move slider-handle
-                for (var i = 0; i <= startvalue - endvalue; i++) {
-                    animateSlider(startvalue - i, i);
+
+                if (startvalue > endvalue) {
+                    for (var i = 0; i <= startvalue - endvalue; i++) {
+                        animateSlider(startvalue - i, i);
+                    }
+                } else {
+                    for (var i = 0; i <= endvalue - startvalue; i++) {
+                        animateSlider(startvalue + i, i);
+                    }
                 }
 
                 $('.chartlabel-premozenje').text('Takšno je pa resnično povprečje.');
@@ -174,12 +350,14 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 2:
 
                 var startvalue = $('.premozenjeslider').slider('getValue');
-                var endvalue = 55.3; // control left histogram
+                var endvalue = 56; // control left histogram
 
                 // move slider-handle
                 for (var i = 0; i <= endvalue - startvalue; i++) {
@@ -192,12 +370,14 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 3:
 
                 var startvalue = $('.premozenjeslider').slider('getValue');
-                var endvalue = 54; // control left histogram
+                var endvalue = 50; // control left histogram
 
                 // move slider-handle
                 for (var i = 0; i <= startvalue - endvalue; i++) {
@@ -209,6 +389,8 @@ function setUpPremozenje() {
                 premozenjefaza = premozenjefaza + 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
@@ -222,6 +404,8 @@ function setUpPremozenje() {
                 premozenjefaza = premozenjefaza + 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
@@ -254,6 +438,7 @@ function setUpPremozenje() {
                         }
                     },
                     'onRegionTipShow': function (e, label, code) {
+                        label.html(mapNames[code]);
                         // if (mapData.hasOwnProperty(code)) {
                         //     label.html(mapNames[code] + ': ' + mapData[code] + '%');
                         // } else {
@@ -263,30 +448,35 @@ function setUpPremozenje() {
                     },
                     'onRegionClick': function (e, code) {
 
+                        // get selected regions
                         var regions = zemljevid.getSelectedRegions();
 
+                        // make map overlay visible if not already
                         if (!$('.mapoverlay').hasClass('visible')) {
                             $('.mapoverlay').addClass('visible');
                         }
 
+                        // make map button visible if 3 regions were selected
                         if ($('.themapbutton').hasClass('hidden')) {
                             if (regions.length >= 2) {
                                 $('.themapbutton').removeClass('hidden');
                             }
                         }
 
+                        // check if region already selected
                         if (regions.indexOf(code) === -1) {
+                            if (truecountries.indexOf(code) === -1) {
+                                $('.mapoverlay').append('<span class="mapoverlaycountry mapoverlaycountry-missed" data-country-code="' + code + '">' + mapNames[code] + '</span>');
+                            } else {
+                                $('.mapoverlay').append('<span class="mapoverlaycountry" data-country-code="' + code + '">' + mapNames[code] + '</span>');
+                            }
 
-                            $('.mapoverlaycountry-missed').filter(function() {
-                                return $(this).data('country-code') == code;
-                            }).removeClass('mapoverlaycountry-missed');
-
+                            // $('.mapoverlaycountry-missed').filter(function() {
+                            //     return $(this).data('country-code') == code;
+                            // }).removeClass('mapoverlaycountry-missed');
                         }
                     }
                 });
-                // zemljevid.setFocus({
-                //     'regions': Object.keys(mapData)
-                // });
 
                 zemljevid = $('#premozenjeoaze').vectorMap('get', 'mapObject');
 
@@ -294,35 +484,62 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 6:
 
                 var regions = zemljevid.getSelectedRegions()
+                console.log(regions);
 
-                $.each($('.mapoverlaycountry-missed'), function(i, e) {
-                    console.log(e);
-                    $(e).removeClass('mapoverlaycountry-missed');
-                    var regions = zemljevid.getSelectedRegions()
-                    regions.push($(e).data('country-code'));
-
-                    zemljevid.setSelectedRegions(regions);
+                $.each(regions, function(i, code) {
+                    if (truecountries.indexOf(code) === -1) {
+                        regions.splice(truecountries.indexOf(code), 1);
+                        zemljevid.setSelectedRegions(regions);
+                    }
                 });
+
+                zemljevid.clearSelectedRegions();
+
+                $.each(truecountries, function(i, code) {
+                    if (regions.indexOf(code) === -1) {
+                        $('.mapoverlay').append('<span class="mapoverlaycountry" data-country-code="' + code + '">' + mapNames[code] + '</span>');
+                        regions.push(code);
+                        zemljevid.setSelectedRegions(regions);
+                    }
+                });
+
+                $('.mapoverlay').addClass('solved');
+
+                // $.each($('.mapoverlaycountry-missed'), function(i, e) {
+                //     console.log(e);
+                //     $(e).removeClass('mapoverlaycountry-missed');
+                //     var regions = zemljevid.getSelectedRegions()
+                //     regions.push($(e).data('country-code'));
+                //
+                //     zemljevid.setSelectedRegions(regions);
+                // });
 
 
                 premozenjefaza = premozenjefaza + 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
             case 7:
 
                 $('.mapcontainer-popover').addClass('visible');
+                $('.hideafterpopup').addClass('hidden');
 
                 premozenjefaza = premozenjefaza + 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
@@ -332,6 +549,8 @@ function setUpPremozenje() {
 
                 $('.content-premozenje-oaze').addClass('hidden');
                 $('.content-first-dohodkovna').removeClass('hidden');
+
+                window.history.pushState('object or string', 'home', '/dohodek/');
 
                 break;
 
@@ -350,21 +569,24 @@ function setUpPremozenje() {
                 $('.content-premozenje-slider').addClass('hidden');
                 $('.content-first-premozenje').removeClass('hidden');
 
-                $('.premozenjeslider').slider('setValue', 50);
+                $('.premozenjeslider').slider('setValue', 99);
                 $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)?');
 
                 premozenjefaza = premozenjefaza - 1;
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/');
 
                 break;
 
             case 2:
 
                 var startvalue = $('.premozenjeslider').slider('getValue');
-                var endvalue = 50;
+                var endvalue = 99;
 
                 // move slider-handle
-                animateSlider(50, 1);
+                animateSlider(andvalue, 1);
+                $('.premozenjeslider').parent().removeClass('noball');
                 // for (var i = 0; i <= startvalue - endvalue; i++) {
                 //     animateSlider(startvalue - i, i);
                 // }
@@ -375,19 +597,21 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 3:
 
                 var startvalue = $('.premozenjeslider').slider('getValue');
-                var endvalue = 20;
+                var endvalue = 51;
 
                 // move slider-handle
                 // for (var i = 0; i <= endvalue - startvalue; i++) {
                 //     animateSlider(startvalue + i, i);
                 // }
 
-                animateSlider(20, 1);
+                animateSlider(endvalue, 1);
 
                 $('.chartlabel-premozenje').text('Takšno je pa resnično povprečje.');
 
@@ -395,25 +619,29 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 4:
 
                 var startvalue = $('.premozenjeslider').slider('getValue');
-                var endvalue = 60;
+                var endvalue = 56;
 
                 // move slider-handle
                 // for (var i = 0; i <= endvalue - startvalue; i++) {
                 //     animateSlider(startvalue + i, i);
                 // }
 
-                animateSlider(60, 1);
+                animateSlider(endvalue, 1);
 
                 $('.chartlabel-premozenje').text('Takole je svetovno povprečje izgledalo pred finančno krizo 2008.');
 
                 premozenjefaza = premozenjefaza - 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
@@ -426,6 +654,8 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 6:
@@ -436,6 +666,8 @@ function setUpPremozenje() {
                 premozenjefaza = premozenjefaza - 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
@@ -487,9 +719,6 @@ function setUpPremozenje() {
                         }
                     }
                 });
-                // zemljevid.setFocus({
-                //     'regions': Object.keys(mapData)
-                // });
 
                 zemljevid = $('#premozenjeoaze').vectorMap('get', 'mapObject');
 
@@ -497,15 +726,21 @@ function setUpPremozenje() {
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
                 break;
 
             case 8:
+
+                $('.hideafterpopup').removeClass('hidden');
 
                 $('.mapcontainer-popover').removeClass('visible');
 
                 premozenjefaza = premozenjefaza - 1;
 
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
+
+                window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
                 break;
 
@@ -515,7 +750,6 @@ function setUpPremozenje() {
         }
 
     });
-
 }
 
 // Kako misliš, da je razporejeno premoženje?

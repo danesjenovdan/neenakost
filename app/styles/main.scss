@@ -43,6 +43,10 @@ p {
     text-align: center;
 }
 
+.pitalic {
+    font-style: italic;
+}
+
 .content-container {
     background-color: $light-blue;
     padding-top: 30px;
@@ -74,6 +78,12 @@ p {
     }
 }
 
+// .containerforcontent {
+//     max-width: 550px;
+// }
+
+@import 'landing';
+
 @import 'header';
 @import 'buttons';
 @import 'content-first';
@@ -82,3 +92,5 @@ p {
 @import 'ginislider';
 @import 'barchart';
 @import 'footer';
+@import 'resitve';
+@import 'popover';

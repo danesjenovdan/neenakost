@@ -56,7 +56,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
 
-    a {
+    .mapoverlaycountry {
         color: $light-blue;
         display: block;
         width: 100%;
@@ -64,13 +64,19 @@
         font-family: $bold;
     }
 
-    .mapoverlaycountry-missed {
-        display: none;
-        color: $red;
-    }
+    // .mapoverlaycountry-missed {
+    //     display: none;
+    //     color: $red;
+    // }
 }
 .mapoverlay.visible {
     right: 0;
+}
+.mapoverlay.solved {
+    .mapoverlaycountry-missed {
+        color: $red;
+        text-decoration: line-through;
+    }
 }
 
 .map {

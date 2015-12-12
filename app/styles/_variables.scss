@@ -8,6 +8,32 @@ $black: #0e162a;
 $white: #ffffff;
 
 // END COLORS //
+
+@font-face {
+    font-family: 'clear_sansbold';
+    src: url('fonts/ClearSans-Bold-webfont.eot');
+    src: url('fonts/ClearSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ClearSans-Bold-webfont.woff') format('woff'),
+         url('fonts/ClearSans-Bold-webfont.ttf') format('truetype'),
+         url('fonts/ClearSans-Bold-webfont.svg#clear_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'clear_sansregular';
+    src: url('fonts/ClearSans-Regular-webfont.eot');
+    src: url('fonts/ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ClearSans-Regular-webfont.woff') format('woff'),
+         url('fonts/ClearSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/ClearSans-Regular-webfont.svg#clear_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 // FONT STACK //
 $regular: clear_sansregular, sans-serif;
 $bold: clear_sansbold, sans-serif;

@@ -28,10 +28,10 @@
     left: 2px;
 }
 
-.thebackbutton {
+.thebackbutton, .leftbutton {
     float: left;
 }
-.theforwardbutton {
+.theforwardbutton, .rightbutton {
     float: right;
 }
 
@@ -47,6 +47,9 @@
     overflow: hidden;
 
     .zavesa {
+
+        transition: all 0.4s;
+
         position: absolute;
         top: 0;
         right: 0;

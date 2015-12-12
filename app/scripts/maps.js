@@ -88,6 +88,6 @@ $('.map').vectorMap({
     }
 });
 var zemljevid = $('.map').vectorMap('get', 'mapObject');
-zemljevid.setFocus({
-    'regions': Object.keys(mapData)
-});
+// zemljevid.setFocus({
+//     'regions': Object.keys(mapData)
+// });

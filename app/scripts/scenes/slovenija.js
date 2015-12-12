@@ -3,13 +3,16 @@ var slovenijafaza;
 function animateLeftPart() {
     $.each($('.bar-histogram-lefty'), function(i, e) {
 
+        var pxs = (parseFloat($(e).data('value')) - 21) * 315/5;
+        console.log(pxs);
+
         $(e).prev().animate({
-            'top': 315 - $(e).data('value')
+            'top': 315 - pxs
         });
 
         $(e).parent().addClass('bar-visible');
         $(e).animate({
-            'height': $(e).data('value') + 'px'
+            'height': pxs + 'px'
         });
     });
 }
@@ -32,14 +35,18 @@ function destroyLeftPart() {
 function animateRightPart() {
     $.each($('.bar-histogram-righty'), function(i, e) {
 
+        var pxs = (parseFloat($(e).data('value')) - 21) * 315/5;
+
         $(e).prev().animate({
-            'top': 315 - $(e).data('value')
+            'top': 315 - pxs
         });
 
         $(e).parent().addClass('bar-visible');
         $(e).animate({
-            'height': $(e).data('value') + 'px'
+            'height': pxs + 'px'
         });
+
+        $('.showwithrighty').removeClass('hidden');
     });
 }
 function destroyRightPart() {
@@ -54,6 +61,8 @@ function destroyRightPart() {
         }, 700, function() {
             $(e).parent().removeClass('bar-visible');
         });
+
+        $('.showwithrighty').addClass('hidden');
     });
 }
 
@@ -64,6 +73,12 @@ function setUpSlovenija() {
     $('.menuitem-zastava').addClass('active');
 
     slovenijafaza = 0;
+    $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+    destroyRightPart();
+    destroyLeftPart();
+}
+
+function setUpSlovenijaButtons() {
 
     $('.theslovenijabutton').on('click', function() {
         slovenijafaza = $(this).data('slovenijafaza');
@@ -78,6 +93,8 @@ function setUpSlovenija() {
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
 
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
                 break;
 
             case 1:
@@ -87,6 +104,8 @@ function setUpSlovenija() {
                 slovenijafaza = slovenijafaza + 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
 
                 break;
 
@@ -98,16 +117,57 @@ function setUpSlovenija() {
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
 
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
                 break;
 
             case 3:
 
                 $('.content-slovenija-gini').addClass('hidden');
-                $('.content-slovenija-drugacenpogled').removeClass('hidden');
+                $('.content-slovenija-drugacenpogled-davki').removeClass('hidden');
 
                 slovenijafaza = slovenijafaza + 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
+                break;
+
+            case 4:
+
+                $('.content-slovenija-drugacenpogled-davki').addClass('hidden');
+                $('.content-slovenija-drugacenpogled-pokrizi').removeClass('hidden');
+
+                slovenijafaza = slovenijafaza + 1;
+
+                $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
+                break;
+
+            case 5:
+
+                $('.content-slovenija-drugacenpogled-pokrizi').addClass('hidden');
+                $('.content-slovenija-drugacenpogled-nepremicnine').removeClass('hidden');
+
+                slovenijafaza = slovenijafaza + 1;
+
+                $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
+                break;
+
+            case 6:
+
+                $('.content-slovenija-drugacenpogled').addClass('hidden');
+                $('.content-final').removeClass('hidden');
+
+                setUpResitve();
+
+                window.history.pushState('object or string', 'home', '/resitve/');
 
                 break;
 
@@ -161,7 +221,29 @@ function setUpSlovenija() {
             case 4:
 
                 $('.content-slovenija-gini').removeClass('hidden');
-                $('.content-slovenija-drugacenpogled').addClass('hidden');
+                $('.content-slovenija-drugacenpogled-davki').addClass('hidden');
+
+                slovenijafaza = slovenijafaza - 1;
+
+                $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                break;
+
+            case 5:
+
+                $('.content-slovenija-drugacenpogled-davki').removeClass('hidden');
+                $('.content-slovenija-drugacenpogled-pokrizi').addClass('hidden');
+
+                slovenijafaza = slovenijafaza - 1;
+
+                $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                break;
+
+            case 6:
+
+                $('.content-slovenija-drugacenpogled-pokrizi').removeClass('hidden');
+                $('.content-slovenija-drugacenpogled-nepremicnine').addClass('hidden');
 
                 slovenijafaza = slovenijafaza - 1;
 

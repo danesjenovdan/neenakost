@@ -10,10 +10,10 @@ function animateDohodkovnaSlider(thevalue, i) {
         $('.dohodkovnaslider').slider('setValue', thevalue);
 
         $('.bar-dohodkovna-left .bar-top .value').text(thevalue);
-        $('.bar-dohodkovna-left .bar-histogram').css('height', Math.round((315.0 / (thevalue + 1.0)) * thevalue));
+        $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315/349 * thevalue));
 
         $('.bar-dohodkovna-right .bar-top .value').text(1);
-        $('.bar-dohodkovna-right .bar-histogram').css('height', Math.round(315.0 / (thevalue + 1.0)));
+        $('.bar-dohodkovna-right .bar-histogram').not('.gdp-histogram').css('height', 1); //Math.round(315.0 / (thevalue + 1.0)));
 
         animateBarTop();
 
@@ -23,7 +23,7 @@ function animateDohodkovnaSlider(thevalue, i) {
 // dohodkovna linechart
 
 var dohodkovnadatasets2 = {
-    labels: ['1948', '1960', '1970', '1980', '1990', '2000', '2011'],
+    labels: ['1948', '1949', '1950', '1951', '1952', '1953', '1954', '1955', '1956', '1957', '1958', '1959', '1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011'],
     datasets: [{
         label: "Produktivnost",
         fillColor: 'rgba(255, 255, 255, 0)',
@@ -32,7 +32,7 @@ var dohodkovnadatasets2 = {
         pointStrokeColor: '#71d079',
         pointHighlightFill: '#71d079',
         pointHighlightStroke: '#71d079',
-        data: [60, 120, 150, 200, 280, 330, 375]
+        data: [30.614, 31.163, 33.287, 33.935, 34.886, 36.085, 36.938, 38.334, 38.452, 39.584, 40.649, 42.03, 42.764, 44.06, 45.583, 47.2, 48.667, 50.07, 51.53, 52.255, 53.811, 54.165, 55.237, 57.342, 58.767, 60.247, 59.697, 61.327, 62.799, 63.453, 63.981, 64.243, 64.246, 65.738, 65.437, 67.188, 68.557, 69.798, 71.379, 71.72, 72.503, 73.075, 74.318, 75.208, 77.697, 78.086, 78.8, 78.84, 80.78, 81.979, 83.747, 86.105, 88.489, 90.55, 93.408, 96.281, 98.514, 100, 100.815, 102.035, 102.802, 104.999, 108.225, 108.478]
     }, {
         label: "Kompenzacija",
         fillColor: 'rgba(255, 255, 255, 0)',
@@ -41,12 +41,12 @@ var dohodkovnadatasets2 = {
         pointStrokeColor: '#ca485a',
         pointHighlightFill: '#ca485a',
         pointHighlightStroke: '#ca485a',
-        data: [58, 100, 125, 170, 220, 240, 270]
+        data: [11.37, 12.07, 12.53, 12.62, 12.99, 13.67, 13.95, 14.58, 15.19, 15.56, 15.68, 16.2, 16.56, 16.83, 17.37, 17.65, 18.05, 18.51, 18.79, 19.02, 19.48, 19.94, 20.17, 20.8, 21.87, 22.03, 21.62, 21.59, 22.09, 22.56, 22.91, 22.61, 22.08, 21.97, 21.99, 22, 21.88, 21.74, 21.77, 21.44, 21.3, 21.18, 20.98, 20.99, 21.02, 21.07, 21.13, 21, 20.99, 21.19, 21.67, 21.96, 22.08, 22.42, 22.99, 23.35, 23.17, 23.07, 23.08, 23.19, 23.33, 24.31, 24.46, 24.23]
     }]
 };
 
 var dohodkovnadatasets3 = {
-    labels: ['1948', '1960', '1970', '1980', '1990', '2000', '2011'],
+    labels: ['1948', '1949', '1950', '1951', '1952', '1953', '1954', '1955', '1956', '1957', '1958', '1959', '1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011'],
     datasets: [{
         label: "Produktivnost",
         fillColor: 'rgba(255, 255, 255, 0)',
@@ -55,7 +55,7 @@ var dohodkovnadatasets3 = {
         pointStrokeColor: '#71d079',
         pointHighlightFill: '#71d079',
         pointHighlightStroke: '#71d079',
-        data: [60, 120, 150, 200, 280, 330, 375]
+        data: [30.614, 31.163, 33.287, 33.935, 34.886, 36.085, 36.938, 38.334, 38.452, 39.584, 40.649, 42.03, 42.764, 44.06, 45.583, 47.2, 48.667, 50.07, 51.53, 52.255, 53.811, 54.165, 55.237, 57.342, 58.767, 60.247, 59.697, 61.327, 62.799, 63.453, 63.981, 64.243, 64.246, 65.738, 65.437, 67.188, 68.557, 69.798, 71.379, 71.72, 72.503, 73.075, 74.318, 75.208, 77.697, 78.086, 78.8, 78.84, 80.78, 81.979, 83.747, 86.105, 88.489, 90.55, 93.408, 96.281, 98.514, 100, 100.815, 102.035, 102.802, 104.999, 108.225, 108.478]
     }, {
         label: "Kompenzacija",
         fillColor: 'rgba(255, 255, 255, 0)',
@@ -64,23 +64,23 @@ var dohodkovnadatasets3 = {
         pointStrokeColor: '#ca485a',
         pointHighlightFill: '#ca485a',
         pointHighlightStroke: '#ca485a',
-        data: [58, 100, 125, 170, 220, 240, 270]
+        data: [11.37, 12.07, 12.53, 12.62, 12.99, 13.67, 13.95, 14.58, 15.19, 15.56, 15.68, 16.2, 16.56, 16.83, 17.37, 17.65, 18.05, 18.51, 18.79, 19.02, 19.48, 19.94, 20.17, 20.8, 21.87, 22.03, 21.62, 21.59, 22.09, 22.56, 22.91, 22.61, 22.08, 21.97, 21.99, 22, 21.88, 21.74, 21.77, 21.44, 21.3, 21.18, 20.98, 20.99, 21.02, 21.07, 21.13, 21, 20.99, 21.19, 21.67, 21.96, 22.08, 22.42, 22.99, 23.35, 23.17, 23.07, 23.08, 23.19, 23.33, 24.31, 24.46, 24.23]
     }, {
-        label: "Povprečen prihodek 1 %",
+        label: "Povprečen prihodek 1 % (v desettisočih)",
         fillColor: 'rgba(255, 255, 255, 0)',
         strokeColor: '#ffffff',
         pointColor: '#ffffff',
         pointStrokeColor: '#ffffff',
         pointHighlightFill: '#ffffff',
         pointHighlightStroke: '#ffffff',
-        data: [60, 130, 120, 230, 320, 290, 400]
+        data: [27.885001, 26.745812, 29.96601, 28.585999, 27.366957, 26.602257, 27.174753, 28.393105, 29.564004, 29.355608, 27.986441, 29.381234, 28.384449, 28.651148, 29.469381, 29.808103, 30.696718, 32.131535, 34.81467, 35.903608, 36.757288, 35.800775, 35.038067, 34.863102, 36.159799, 36.853332, 37.511703, 35.018691, 35.337952, 35.73354, 36.648143, 36.979033, 36.634815, 35.649353, 36.518871, 37.0326, 39.586175, 41.231053, 41.942626, 50.75999, 65.270197, 62.329764, 63.707904, 58.00326, 64.797576, 60.723849, 61.94251, 67.081404, 71.579973, 77.894543, 84.557915, 91.216559, 96.295876, 87.648268, 82.216083, 82.305564, 90.774555, 100.387315, 104.425421, 108.978203, 100.834123, 88.459121, 93.095336, 92.505899]
     }]
 };
 
 var dohodkovnalinechart;
 
 var dohodkovnalinechartdata = {
-    labels: ['1948', '1960', '1970', '1980', '1990', '2000', '2011'],
+    labels: ['1948', '1949', '1950', '1951', '1952', '1953', '1954', '1955', '1956', '1957', '1958', '1959', '1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011'],
     datasets: [{
         label: "Produktivnost",
         fillColor: 'rgba(255, 255, 255, 0)',
@@ -89,7 +89,7 @@ var dohodkovnalinechartdata = {
         pointStrokeColor: '#71d079',
         pointHighlightFill: '#71d079',
         pointHighlightStroke: '#71d079',
-        data: [60, 120, 150, 200, 280, 330, 375]
+        data: [30.614, 31.163, 33.287, 33.935, 34.886, 36.085, 36.938, 38.334, 38.452, 39.584, 40.649, 42.03, 42.764, 44.06, 45.583, 47.2, 48.667, 50.07, 51.53, 52.255, 53.811, 54.165, 55.237, 57.342, 58.767, 60.247, 59.697, 61.327, 62.799, 63.453, 63.981, 64.243, 64.246, 65.738, 65.437, 67.188, 68.557, 69.798, 71.379, 71.72, 72.503, 73.075, 74.318, 75.208, 77.697, 78.086, 78.8, 78.84, 80.78, 81.979, 83.747, 86.105, 88.489, 90.55, 93.408, 96.281, 98.514, 100, 100.815, 102.035, 102.802, 104.999, 108.225, 108.478]
     }]
 };
 
@@ -131,13 +131,13 @@ function animateBarchart(element) {
 
 function makeGiniSlider() {
 
-    $.each($('.ginipoint'), function(i, e) {
+    $.each($('.ginipoint'), function (i, e) {
         $(e).css({
             'left': $(e).data('position') + '%'
         });
     });
 
-    $('.ginipoint').on('click', function() {
+    $('.ginipoint').on('click', function () {
 
         $('.ginipoint.active').removeClass('active');
         $(this).addClass('active');
@@ -174,16 +174,24 @@ function setUpDohodek() {
     var dohodkovnaslider = $('.dohodkovnaslider').slider().on('slide', function (event) {
 
         $('.bar-dohodkovna-left .bar-top .value').text(event.value);
-        $('.bar-dohodkovna-left .bar-histogram').css('height', Math.round((315.0 / (event.value + 1.0)) * event.value));
+        $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315 / 349 * event.value));
 
         $('.bar-dohodkovna-right .bar-top .value').text(1);
-        $('.bar-dohodkovna-right .bar-histogram').css('height', Math.round(315.0 / (event.value + 1.0)));
+        $('.bar-dohodkovna-right .bar-histogram').not('.gdp-histogram').css('height', 1);//Math.round(315.0 / (event.value + 1.0)));
 
         animateBarTop();
 
     });
 
+    animateDohodkovnaSlider(1, 1);
+    $('.dohodkovnaslider').parent().removeClass('noball');
+    $('.chartlabel-dohodek').text('Kakšno misliš, da je globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja?');
+
     dohodkovnafaza = 0;
+    $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+}
+
+function setUpDohodekButtons() {
 
     // set up next button
 
@@ -202,6 +210,8 @@ function setUpDohodek() {
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
             break;
 
         case 1:
@@ -209,13 +219,23 @@ function setUpDohodek() {
             var startvalue = $('.dohodkovnaslider').slider('getValue');
             var endvalue = 101.38; // control left histogram
 
-            for (var i = 0; i <= startvalue - endvalue; i++) {
-                animateDohodkovnaSlider(startvalue - i, i)
+            if (startvalue > endvalue) {
+                for (var i = 0; i <= startvalue - endvalue; i++) {
+                    animateDohodkovnaSlider(startvalue - i, i)
+                }
+            } else {
+                for (var i = 0; i <= endvalue - startvalue; i++) {
+                    animateDohodkovnaSlider(startvalue + i, i)
+                }
             }
+
+            $('.chartlabel-dohodek').text('Takšno je resnično globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja.');
 
             dohodkovnafaza = dohodkovnafaza + 1;
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
             break; // TODO
 
@@ -230,6 +250,8 @@ function setUpDohodek() {
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
             break;
 
         case 3:
@@ -243,6 +265,8 @@ function setUpDohodek() {
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
             break;
 
         case 4:
@@ -253,6 +277,8 @@ function setUpDohodek() {
             dohodkovnafaza = dohodkovnafaza + 1;
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
             break;
 
@@ -265,6 +291,8 @@ function setUpDohodek() {
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
             break;
 
         case 6:
@@ -275,6 +303,8 @@ function setUpDohodek() {
             dohodkovnafaza = dohodkovnafaza + 1;
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
             break;
 
@@ -289,6 +319,8 @@ function setUpDohodek() {
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
             break;
 
         case 8:
@@ -302,6 +334,8 @@ function setUpDohodek() {
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
             break;
 
         case 9:
@@ -310,6 +344,8 @@ function setUpDohodek() {
 
             $('.content-dohodkovna-gini-slider').addClass('hidden');
             $('.content-first-slovenija').removeClass('hidden');
+
+            window.history.pushState('object or string', 'home', '/slovenija/');
 
             break;
 
@@ -320,111 +356,145 @@ function setUpDohodek() {
         }
     });
 
-    $('.thedohodkovnabackbutton').on('click', function() {
+    $('.thedohodkovnabackbutton').on('click', function () {
 
         switch (dohodkovnafaza) {
-            case 0:
+        case 0:
 
-                $('.content-premozenje-oaze').removeClass('hidden');
-                $('.content-first-dohodkovna').addClass('hidden');
+            $('.content-premozenje-oaze').removeClass('hidden');
+            $('.content-first-dohodkovna').addClass('hidden');
 
-                break;
+            window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
 
-            case 1:
+            break;
 
-                $('.content-first-dohodkovna').removeClass('hidden');
-                $('.content-dohodkovna-slider').addClass('hidden');
+        case 1:
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+            $('.content-first-dohodkovna').removeClass('hidden');
+            $('.content-dohodkovna-slider').addClass('hidden');
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-                break;
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-            case 2:
+            window.history.pushState('object or string', 'home', '/dohodek/');
 
-                $('.content-dohodkovna-slider').removeClass('hidden');
-                $('.content-dohodkovna-primerjalno').addClass('hidden');
+            break;
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+        case 2:
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            // $('.dohodkovnaslider').slider('destroy');
+            animateDohodkovnaSlider(1, 1);
+            $('.dohodkovnaslider').parent().removeClass('noball');
 
-                break;
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-            case 3:
+            $('.chartlabel-dohodek').text('Kakšno misliš, da je globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja?');
 
-                $('.content-dohodkovna-primerjalno').removeClass('hidden');
-                $('.content-dohodkovna-linechart').addClass('hidden');
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-                animateBarchart($('.chartcontainer-dohodkovna-primerjalno')[0]);
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+            break;
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+        case 3:
 
-                break;
+            $('.content-dohodkovna-slider').removeClass('hidden');
+            $('.content-dohodkovna-primerjalno').addClass('hidden');
 
-            case 4:
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-                dohodkovnalinechart.destroy();
-                makeDohodkovnaLinechart(dohodkovnalinechartdata);
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            break;
 
-                break;
+        case 4:
 
-            case 5:
+            $('.content-dohodkovna-primerjalno').removeClass('hidden');
+            $('.content-dohodkovna-linechart').addClass('hidden');
 
-                dohodkovnalinechart.destroy();
-                makeDohodkovnaLinechart(dohodkovnadatasets2);
+            animateBarchart($('.chartcontainer-dohodkovna-primerjalno')[0]);
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-                break;
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
-            case 6:
+            break;
 
-                $('.content-dohodkovna-linechart').removeClass('hidden');
-                $('.content-gini-intro').addClass('hidden');
+        case 5:
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+            dohodkovnalinechart.destroy();
+            makeDohodkovnaLinechart(dohodkovnalinechartdata);
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-                break;
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-            case 7:
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
-                $('.content-gini-intro').removeClass('hidden');
-                $('.content-gini-primerjalno').addClass('hidden');
+            break;
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+        case 6:
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            dohodkovnalinechart.destroy();
+            makeDohodkovnaLinechart(dohodkovnadatasets2);
 
-                break;
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-            case 8:
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-                $('.content-gini-primerjalno').removeClass('hidden');
-                $('.content-dohodkovna-gini-slider').addClass('hidden');
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
 
-                animateBarchart($('.chartcontainer-gini-primerjalno')[0]);
+            break;
 
-                dohodkovnafaza = dohodkovnafaza - 1;
+        case 7:
 
-                $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+            $('.content-dohodkovna-linechart').removeClass('hidden');
+            $('.content-gini-intro').addClass('hidden');
 
-                break;
+            dohodkovnafaza = dohodkovnafaza - 1;
 
-            default:
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
-                break;
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
+            break;
+
+        case 8:
+
+            $('.content-gini-intro').removeClass('hidden');
+            $('.content-gini-primerjalno').addClass('hidden');
+
+            dohodkovnafaza = dohodkovnafaza - 1;
+
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
+            break;
+
+        case 9:
+
+            $('.content-gini-primerjalno').removeClass('hidden');
+            $('.content-dohodkovna-gini-slider').addClass('hidden');
+
+            animateBarchart($('.chartcontainer-gini-primerjalno')[0]);
+
+            dohodkovnafaza = dohodkovnafaza - 1;
+
+            $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
+
+            window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
+            break;
+
+        default:
+
+            break;
         }
 
     });

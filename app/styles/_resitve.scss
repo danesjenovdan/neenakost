@@ -1,0 +1,30 @@
+
+.card {
+    background-color: $dark-blue;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    h1 {
+        text-align: left;
+        font-family: $regular;
+
+        img {
+            display: inline-block;
+        }
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .spoznajveccontainer {
+        width: 100%;
+        text-align: right;
+
+        a {
+            text-transform: uppercase;
+            color: $light-green;
+        }
+
+    }
+}
