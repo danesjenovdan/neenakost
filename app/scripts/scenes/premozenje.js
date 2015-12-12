@@ -585,7 +585,7 @@ function setUpPremozenjeButtons() {
                 var endvalue = 99;
 
                 // move slider-handle
-                animateSlider(andvalue, 1);
+                animateSlider(endvalue, 1);
                 $('.premozenjeslider').parent().removeClass('noball');
                 // for (var i = 0; i <= startvalue - endvalue; i++) {
                 //     animateSlider(startvalue - i, i);
