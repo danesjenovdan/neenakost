@@ -337,7 +337,9 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'styles/jquery-jvectormap-2.0.4.css',
+                        // 'scripts/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
