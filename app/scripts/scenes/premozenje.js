@@ -261,7 +261,7 @@ var mapNames = {
 	'QA': 'Katar',
 	'MZ': 'Mozambik'
 }
-var truecountries = ['AO', 'BS', 'BZ', 'BN', 'US', 'DO', 'MY', 'LU', 'CN', 'PT', 'NL', 'CH', 'VU'];
+var truecountries = ['AO', 'BS', 'BZ', 'BN', 'DO', 'MY', 'LU', 'CN', 'PT', 'NL', 'CH', 'VU'];
 var othertruecountries = ['Andora', 'Angvila', 'Antigva in Barbuda', 'Aruba', 'Bahrajn', 'Bahami', 'Barbados', 'Belize', 'Bermudi', 'Britanski Deviški otoki', 'Brunej', 'Kajmanski otoki', 'Ciper', 'Cookovo otočje', 'Dominikanska republika', 'Gibraltar', 'Grenada', 'Guernsey', 'Hong Kong', 'Isle of Man', 'Jersey', 'Malezija', 'Lihtenštajn', 'Luxemburg', 'Macao', 'Madeira', 'Maldivi', 'Malta', 'Marshallovi otoki', 'Monako', 'Montserrat', 'Nizozemski Antili', 'Samoa', 'San Marino', 'Sejšeli', 'Singapur', 'St. Kitts & Nevis', 'Sveta Lucia', 'Sveti Vincent in Grenadini', 'Otoki Turks in Caicos', 'Vanuatu', 'Deviški otoki'];
 
 var mapNamesEmpty = {}
