@@ -111,7 +111,7 @@
     font-family: 'Titillium Web';
     text-align: center;
 
-    // cursor: pointer;
+    cursor: pointer;
 }
 .osflogo {
     width: 107px;
@@ -125,6 +125,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    cursor: pointer;
 }
 .idslogo {
     width: 67px;
@@ -138,6 +140,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    cursor: pointer;
 }
 
 @media (max-width: 997px) {

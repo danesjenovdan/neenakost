@@ -96,6 +96,16 @@ $(document).ready(function () {
     window.onresize = function () {
         $('.menuitem').width(($(window).width() - 76 - 4 * 55) / 4);
     }
+
+    $('.djndlogo').on('click', function() {
+        window.open('http://danesjenovdan.si', '_blank');
+    });
+    $('.osflogo').on('click', function() {
+        window.open('https://www.opensocietyfoundations.org/', '_blank');
+    });
+    $('.idslogo').on('click', function() {
+        window.open('http://www.delavske-studije.si/', '_blank');
+    });
 });
 
 // eslint-disable-line no-console
