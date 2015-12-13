@@ -189,6 +189,8 @@ function setUpSlovenijaButtons() {
                 $('.content-dohodkovna-gini-slider').removeClass('hidden');
                 $('.content-first-slovenija').addClass('hidden');
 
+                window.history.pushState('object or string', 'home', '/dohodek/' + dohodkovnafaza);
+
                 break;
 
             case 1:
@@ -199,6 +201,8 @@ function setUpSlovenijaButtons() {
                 slovenijafaza = slovenijafaza - 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
 
                 break;
 
@@ -212,6 +216,8 @@ function setUpSlovenijaButtons() {
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
 
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
                 break;
 
             case 3:
@@ -224,6 +230,8 @@ function setUpSlovenijaButtons() {
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
 
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
                 break;
 
             case 4:
@@ -234,6 +242,8 @@ function setUpSlovenijaButtons() {
                 slovenijafaza = slovenijafaza - 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
 
                 break;
 
@@ -246,6 +256,8 @@ function setUpSlovenijaButtons() {
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
 
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
+
                 break;
 
             case 6:
@@ -256,6 +268,8 @@ function setUpSlovenijaButtons() {
                 slovenijafaza = slovenijafaza - 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
+
+                window.history.pushState('object or string', 'home', '/slovenija/' + slovenijafaza);
 
                 break;
 
