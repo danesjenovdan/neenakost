@@ -230,7 +230,7 @@ function setUpDohodekButtons() {
                 }
             }
 
-            $('.chartlabel-dohodek').text('Takšno pa je v resnici. Direktor običajno prejme kar 100x večjo plačo od povprečnega delavca.');
+            $('.chartlabel-dohodek').text('Takšno pa je v resnici. Direktor navadno prejme kar stokrat večjo plačo od povprečnega delavca.');
 
             dohodkovnafaza = dohodkovnafaza + 1;
 
