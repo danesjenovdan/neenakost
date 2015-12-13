@@ -37,34 +37,36 @@
 
 .theforwardbutton {
     position: fixed;
-    right: 15px;
+    right: 5px;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -150px;
     width: 50px;
+    height: 300px;
     font-size: 50px;
-    line-height: 38px;
+    line-height: 288px;
     z-index: 100;
 }
 .theforwardbutton:hover {
     top: 50%;
     left: auto;
-    margin-top: -23px;
-    margin-left: 2px;
+    margin-top: -148px;
+    right: 3px;
 }
 .thebackbutton {
     position: fixed;
-    left: 15px;
+    left: 5px;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -150px;
     width: 50px;
+    height: 300px;
     font-size: 50px;
-    line-height: 38px;
+    line-height: 288px;
     z-index: 100;
 }
 .thebackbutton:hover {
     top: 50%;
-    left: 15px;
-    margin-top: -23px;
+    left: 5px;
+    margin-top: -148px;
     margin-left: 2px;
 }
 
