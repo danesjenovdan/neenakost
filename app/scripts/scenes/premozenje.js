@@ -262,6 +262,7 @@ var mapNames = {
 	'MZ': 'Mozambik'
 }
 var truecountries = ['AO', 'BS', 'BZ', 'BN', 'US', 'DO', 'MY', 'LU', 'CN', 'PT', 'NL', 'CH', 'VU'];
+var othertruecountries = ['Andora', 'Angvila', 'Antigva in Barbuda', 'Aruba', 'Bahrajn', 'Bahami', 'Barbados', 'Belize', 'Bermudi', 'Britanski Deviški otoki', 'Brunej', 'Kajmanski otoki', 'Ciper', 'Cookovo otočje', 'Dominikanska republika', 'Gibraltar', 'Grenada', 'Guernsey', 'Hong Kong', 'Isle of Man', 'Jersey', 'Malezija', 'Lihtenštajn', 'Luxemburg', 'Macao', 'Madeira', 'Maldivi', 'Malta', 'Marshallovi otoki', 'Monako', 'Montserrat', 'Nizozemski Antili', 'Samoa', 'San Marino', 'Sejšeli', 'Singapur', 'St. Kitts & Nevis', 'Sveta Lucia', 'Sveti Vincent in Grenadini', 'Otoki Turks in Caicos', 'Vanuatu', 'Deviški otoki'];
 
 var mapNamesEmpty = {}
 
@@ -511,6 +512,9 @@ function setUpPremozenjeButtons() {
                         zemljevid.setSelectedRegions(regions);
                     }
                 });
+                $.each(othertruecountries, function(i, country) {
+                    $('.mapoverlay').append('<span class="mapoverlaycountry" data-country-code="00">' + country + '</span>');
+                });
 
                 $('.mapoverlay').addClass('solved');
 
@@ -676,7 +680,8 @@ function setUpPremozenjeButtons() {
             case 7:
 
                 zemljevid.remove();
-                $('.mapoverlaycountry').addClass('mapoverlaycountry-missed');
+                $('.mapoverlay').removeClass('solved');
+                $('.mapoverlay').children('span').remove();
 
                 $('#premozenjeoaze').vectorMap({
                     'map': 'world_mill',
@@ -702,6 +707,7 @@ function setUpPremozenjeButtons() {
                         }
                     },
                     'onRegionTipShow': function (e, label, code) {
+                        label.html(mapNames[code]);
                         // if (mapData.hasOwnProperty(code)) {
                         //     label.html(mapNames[code] + ': ' + mapData[code] + '%');
                         // } else {
@@ -710,14 +716,33 @@ function setUpPremozenjeButtons() {
                         // }
                     },
                     'onRegionClick': function (e, code) {
+
+                        // get selected regions
                         var regions = zemljevid.getSelectedRegions();
 
+                        // make map overlay visible if not already
+                        if (!$('.mapoverlay').hasClass('visible')) {
+                            $('.mapoverlay').addClass('visible');
+                        }
+
+                        // make map button visible if 3 regions were selected
+                        if ($('.themapbutton').hasClass('hidden')) {
+                            if (regions.length >= 2) {
+                                $('.themapbutton').removeClass('hidden');
+                            }
+                        }
+
+                        // check if region already selected
                         if (regions.indexOf(code) === -1) {
+                            if (truecountries.indexOf(code) === -1) {
+                                $('.mapoverlay').append('<span class="mapoverlaycountry mapoverlaycountry-missed" data-country-code="' + code + '">' + mapNames[code] + '</span>');
+                            } else {
+                                $('.mapoverlay').append('<span class="mapoverlaycountry" data-country-code="' + code + '">' + mapNames[code] + '</span>');
+                            }
 
-                            $('.mapoverlaycountry-missed').filter(function() {
-                                return $(this).data('country-code') == code;
-                            }).removeClass('mapoverlaycountry-missed');
-
+                            // $('.mapoverlaycountry-missed').filter(function() {
+                            //     return $(this).data('country-code') == code;
+                            // }).removeClass('mapoverlaycountry-missed');
                         }
                     }
                 });
