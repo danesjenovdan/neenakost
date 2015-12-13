@@ -93,3 +93,10 @@
 .jvectormap-zoomout {
     top: 40px;
 }
+
+p.noitalic {
+    font-style: normal !important;
+}
+.mapcontainer-popover p.noitalic {
+    margin-bottom: 40px;
+}
