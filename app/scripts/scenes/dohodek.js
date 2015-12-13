@@ -229,7 +229,7 @@ function setUpDohodekButtons() {
                 }
             }
 
-            $('.chartlabel-dohodek').text('Takšno je resnično globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja.');
+            $('.chartlabel-dohodek').text('Takšno pa je v resnici. Direktor običajno prejme kar 100x večjo plačo od povprečnega delavca.');
 
             dohodkovnafaza = dohodkovnafaza + 1;
 
@@ -274,6 +274,8 @@ function setUpDohodekButtons() {
             dohodkovnalinechart.destroy();
             makeDohodkovnaLinechart(dohodkovnadatasets2);
 
+            $('.dohodkovnalinecharttext').text('... a sočasno povprečne plače ne dohajajo porasta produktivnosti. Razlika med obema krivuljama predstavlja neposredni dobiček za kapitaliste ...');
+
             dohodkovnafaza = dohodkovnafaza + 1;
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
@@ -286,6 +288,8 @@ function setUpDohodekButtons() {
 
             dohodkovnalinechart.destroy();
             makeDohodkovnaLinechart(dohodkovnadatasets3);
+
+            $('.dohodkovnalinecharttext').text('... dobički pa se nato prelijejo v dohodke najbogatejših, torej lastnikov produkcijskih sredstev.');
 
             dohodkovnafaza = dohodkovnafaza + 1;
 
@@ -430,6 +434,8 @@ function setUpDohodekButtons() {
             dohodkovnalinechart.destroy();
             makeDohodkovnaLinechart(dohodkovnalinechartdata);
 
+            $('.dohodkovnalinecharttext').text('Produktivnost delavnega razreda se, tudi ob pomoči uvajanja novih tehnologij in optimizacije delovnih procesov, vse bolj povečuje ...');
+
             dohodkovnafaza = dohodkovnafaza - 1;
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
@@ -442,6 +448,8 @@ function setUpDohodekButtons() {
 
             dohodkovnalinechart.destroy();
             makeDohodkovnaLinechart(dohodkovnadatasets2);
+
+            $('.dohodkovnalinecharttext').text('... a sočasno povprečne plače ne dohajajo porasta produktivnosti. Razlika med obema krivuljama predstavlja neposredni dobiček za kapitaliste ...');
 
             dohodkovnafaza = dohodkovnafaza - 1;
 

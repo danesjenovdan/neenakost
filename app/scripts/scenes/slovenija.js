@@ -46,7 +46,7 @@ function animateRightPart() {
             'height': pxs + 'px'
         });
 
-        $('.showwithrighty').removeClass('hidden');
+        // $('.showwithrighty').removeClass('hidden');
     });
 }
 function destroyRightPart() {
@@ -62,7 +62,7 @@ function destroyRightPart() {
             $(e).parent().removeClass('bar-visible');
         });
 
-        $('.showwithrighty').addClass('hidden');
+        // $('.showwithrighty').addClass('hidden');
     });
 }
 
@@ -101,6 +101,8 @@ function setUpSlovenijaButtons() {
 
                 animateLeftPart();
 
+                $('.slovenijaginitext').text('V času pred krizo je celo padal ...');
+
                 slovenijafaza = slovenijafaza + 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
@@ -112,6 +114,8 @@ function setUpSlovenijaButtons() {
             case 2:
 
                 animateRightPart();
+
+                $('.slovenijaginitext').text('... a se je po bančnem zlomu in gospodarski krizi, ki je izbruhnila leta 2009 pričela vnovično povečevati. Najhujši skok neenakosti v letu 2013 gre pripisati uveljavitvi Zakona o uravnoteženju javnih financ, ki je močno posegel v socialne pravice ljudi ter obstoječe socialne politike.')
 
                 slovenijafaza = slovenijafaza + 1;
 
@@ -202,6 +206,8 @@ function setUpSlovenijaButtons() {
 
                 destroyLeftPart();
 
+                $('.slovenijaginitext').text('Tolikšen je znašal GINIjev koeficient v Sloveniji leta 2009. Takrat smo, vsaj na papirju, bili precej enakovredna družba.');
+
                 slovenijafaza = slovenijafaza - 1;
 
                 $('.theslovenijabutton').data('slovenijafaza', slovenijafaza);
@@ -211,6 +217,8 @@ function setUpSlovenijaButtons() {
             case 3:
 
                 destroyRightPart();
+
+                $('.slovenijaginitext').text('V času pred krizo je celo padal ...');
 
                 slovenijafaza = slovenijafaza - 1;
 

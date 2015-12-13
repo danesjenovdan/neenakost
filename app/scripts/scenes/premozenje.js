@@ -344,7 +344,7 @@ function setUpPremozenjeButtons() {
                     }
                 }
 
-                $('.chartlabel-premozenje').text('Takšno je pa resnično povprečje.');
+                $('.chartlabel-premozenje').text('Takšno je pa razmerje v resnici.');
 
                 premozenjefaza = premozenjefaza + 1;
 
@@ -364,7 +364,7 @@ function setUpPremozenjeButtons() {
                     animateSlider(startvalue + i, i);
                 }
 
-                $('.chartlabel-premozenje').text('Takole je svetovno povprečje izgledalo pred finančno krizo 2008.');
+                $('.chartlabel-premozenje').text('Takole je izgledalo pred finančno krizo (2008).');
 
                 premozenjefaza = premozenjefaza + 1;
 
@@ -384,7 +384,7 @@ function setUpPremozenjeButtons() {
                     animateSlider(startvalue - i, i);
                 }
 
-                $('.chartlabel-premozenje').text('Takole bo pa izgledalo čez leto dni.');
+                $('.chartlabel-premozenje').text('Takšno pa bo naslednje leto (2016). 1% najbogatejših si bo lastilo 50% vsega svetovnega premoženja.');
 
                 premozenjefaza = premozenjefaza + 1;
 
@@ -492,6 +492,8 @@ function setUpPremozenjeButtons() {
 
                 var regions = zemljevid.getSelectedRegions()
                 console.log(regions);
+
+                $('h2.hideafterpopup').text('Po svetu jih je več kot 40.')
 
                 $.each(regions, function(i, code) {
                     if (truecountries.indexOf(code) === -1) {
@@ -613,7 +615,7 @@ function setUpPremozenjeButtons() {
 
                 animateSlider(endvalue, 1);
 
-                $('.chartlabel-premozenje').text('Takšno je pa resnično povprečje.');
+                $('.chartlabel-premozenje').text('Takšno je pa razmerje v resnici.');
 
                 premozenjefaza = premozenjefaza - 1;
 
@@ -635,7 +637,7 @@ function setUpPremozenjeButtons() {
 
                 animateSlider(endvalue, 1);
 
-                $('.chartlabel-premozenje').text('Takole je svetovno povprečje izgledalo pred finančno krizo 2008.');
+                $('.chartlabel-premozenje').text('Takole je izgledalo pred finančno krizo (2008).');
 
                 premozenjefaza = premozenjefaza - 1;
 
@@ -727,6 +729,8 @@ function setUpPremozenjeButtons() {
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
 
                 window.history.pushState('object or string', 'home', '/premozenje/' + premozenjefaza);
+
+                $('h2.hideafterpopup').text('Na zemljevidu označi vsaj 3 države, ki delujejo kot davčne oaze.')
 
                 break;
 
