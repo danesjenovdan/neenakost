@@ -13,7 +13,7 @@ function animateDohodkovnaSlider(thevalue, i) {
         $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315/349 * thevalue));
 
         $('.bar-dohodkovna-right .bar-top .value').not('.bar-gini-right .bar-top .value').text(1);
-        $('.bar-dohodkovna-right .bar-histogram').not('.gdp-histogram').css('height', 1); //Math.round(315.0 / (thevalue + 1.0)));
+        $('.bar-dohodkovna-right .bar-histogram').not('.gini-histogram').css('height', 1); //Math.round(315.0 / (thevalue + 1.0)));
 
         animateBarTop();
 
