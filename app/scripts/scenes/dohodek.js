@@ -143,14 +143,14 @@ function makeGiniSlider() {
         $(this).addClass('active');
 
         $('.gdp-histogram').animate({
-            'height': parseFloat($(this).data('gdp')) / 100 * 315 + 'px'
+            'height': (parseFloat($(this).data('gdp')) - 9) * 315 / 7 + 'px'
         })
         $('.gini-histogram').animate({
             'height': parseFloat($(this).data('gini')) * 315 + 'px'
         })
 
         $('.gdp-histogram').prev().animate({
-            'top': 315 - parseFloat($(this).data('gdp')) / 100 * 315
+            'top': 315 - (parseFloat($(this).data('gdp')) - 9) * 315 / 7
         });
         $('.gini-histogram').prev().animate({
             'top': 315 - parseFloat($(this).data('gini')) * 315
