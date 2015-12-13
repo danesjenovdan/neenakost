@@ -24,7 +24,7 @@ $(document).ready(function () {
     });
 
     // fix header
-    $('.menuitem').width(($(window).width() - 76 - 4 * 55) / 4)
+    $('.menuitem').width(($(window).width() - 76) / 4);
 
     setUpPremozenje();
     setUpPremozenjeButtons();
@@ -94,7 +94,7 @@ $(document).ready(function () {
     })
 
     window.onresize = function () {
-        $('.menuitem').width(($(window).width() - 76 - 4 * 55) / 4);
+        $('.menuitem').width(($(window).width() - 76) / 4);
     }
 
     $('.djndlogo').on('click', function() {

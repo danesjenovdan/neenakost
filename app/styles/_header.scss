@@ -20,12 +20,13 @@
     height: 60px;
     width: 250px;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     line-height: 60px;
     position: relative;
-    top: -26px;
+    // top: -20px;
+    overflow: hidden;
     cursor: pointer;
-    padding-left: 55px;
+    // padding-left: 55px;
     background-repeat: no-repeat;
 }
 
@@ -34,24 +35,33 @@
     background-color: $light-blue;
 }
 
-.menuitem-prase {
+.menuimage {
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+}
+
+.menuitem-prase .menuimage {
     background-image: url(../images/prase.png);
-    background-position: 15px center;
+    background-position: center;
 }
 
-.menuitem-kesh {
+.menuitem-kesh .menuimage {
     background-image: url(../images/kesh.png);
-    background-position: 15px center;
+    background-position: center;
 }
 
-.menuitem-zastava {
+.menuitem-zastava .menuimage {
     background-image: url(../images/zastava.png);
-    background-position: 15px center;
+    background-position: center;
 }
 
-.menuitem-resitve {
+.menuitem-resitve .menuimage {
     background-image: url(../images/resitve.png);
-    background-position: 15px center;
+    background-position: center;
 }
 
 .logo {
