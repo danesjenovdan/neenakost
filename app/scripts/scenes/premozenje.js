@@ -475,6 +475,12 @@ function setUpPremozenjeButtons() {
                             // $('.mapoverlaycountry-missed').filter(function() {
                             //     return $(this).data('country-code') == code;
                             // }).removeClass('mapoverlaycountry-missed');
+                        } else {
+                            var thing = $('.mapoverlay').children().filter(function() {
+                                return $(this).data('country-code') == code;
+                            });
+                            thing.remove()
+                            regions.splice(truecountries.indexOf(code), 1);
                         }
                     }
                 });
@@ -743,6 +749,12 @@ function setUpPremozenjeButtons() {
                             // $('.mapoverlaycountry-missed').filter(function() {
                             //     return $(this).data('country-code') == code;
                             // }).removeClass('mapoverlaycountry-missed');
+                        } else {
+                            var thing = $('.mapoverlay').children().filter(function() {
+                                return $(this).data('country-code') == code;
+                            });
+                            thing.remove()
+                            regions.splice(truecountries.indexOf(code), 1);
                         }
                     }
                 });

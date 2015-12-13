@@ -79,9 +79,21 @@ p {
 //     max-width: 550px;
 // }
 .content {
+    height: 780px;
+
+    .buttonrow {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+
     p {
         max-width: 600px;
         margin: auto;
+    }
+    h1 + p {
+        margin-bottom: 30px;
     }
 }
 @import 'landing';
