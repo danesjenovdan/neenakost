@@ -500,7 +500,7 @@ function setUpPremozenjeButtons() {
                 var regions = zemljevid.getSelectedRegions()
                 console.log(regions);
 
-                $('h2.hideafterpopup').text('Po svetu jih je več kot 40.')
+                $('h2.hideafterpopup').text('Na svetu jih je več kot štirideset.')
 
                 $.each(regions, function(i, code) {
                     if (truecountries.indexOf(code) === -1) {
