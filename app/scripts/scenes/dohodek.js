@@ -10,7 +10,7 @@ function animateDohodkovnaSlider(thevalue, i) {
         $('.dohodkovnaslider').slider('setValue', thevalue);
 
         $('.bar-dohodkovna-left .bar-top .value').not('.bar-gini-left .bar-top .value').text(thevalue);
-        $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315/349 * thevalue));
+        $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315/150 * thevalue));
 
         $('.bar-dohodkovna-right .bar-top .value').not('.bar-gini-right .bar-top .value').text(1);
         $('.bar-dohodkovna-right .bar-histogram').not('.gini-histogram').css('height', 1); //Math.round(315.0 / (thevalue + 1.0)));
@@ -173,8 +173,8 @@ function setUpDohodek() {
     // set up slider
     var dohodkovnaslider = $('.dohodkovnaslider').slider().on('slide', function (event) {
 
-        $('.bar-dohodkovna-left .bar-top .value').not('.bar-gini-left .bar-top .value').text(thevalue);
-        $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315/349 * thevalue));
+        $('.bar-dohodkovna-left .bar-top .value').not('.bar-gini-left .bar-top .value').text(event.value);
+        $('.bar-dohodkovna-left .bar-histogram').not('.gdp-histogram').css('height', Math.round(315/150 * event.value));
 
         $('.bar-dohodkovna-right .bar-top .value').not('.bar-gini-right .bar-top .value').text(1);
         $('.bar-dohodkovna-right .bar-histogram').not('.gini-histogram').css('height', 1); //Math.round(315.0 / (thevalue + 1.0)));
