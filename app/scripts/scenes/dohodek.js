@@ -105,7 +105,8 @@ function makeDohodkovnaLinechart(data) {
         'scaleGridLineColor': "rgba(255, 255, 255, 0.6)",
         'scaleLineColor': "rgba(255, 255, 255, 0.6)",
         'scaleFontColor': '#ffffff',
-        'datasetStrokeWidth': 5
+        'datasetStrokeWidth': 5,
+        'showTooltips': false
     });
 
     $('#dohodkovnalegenda').html(dohodkovnalinechart.generateLegend());
