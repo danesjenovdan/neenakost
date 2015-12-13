@@ -92,6 +92,10 @@ $(document).ready(function () {
             ispopoveropen = false;
         }
     })
+
+    window.onresize = function () {
+        $('.menuitem').width(($(window).width() - 76 - 4 * 55) / 4);
+    }
 });
 
 // eslint-disable-line no-console
