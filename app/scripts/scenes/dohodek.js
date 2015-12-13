@@ -186,7 +186,7 @@ function setUpDohodek() {
 
     animateDohodkovnaSlider(1, 1);
     $('.dohodkovnaslider').parent().removeClass('noball');
-    $('.chartlabel-dohodek').text('Kakšno misliš, da je globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja?');
+    $('.chartlabel-dohodek').text('Kakšno misliš, da je globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja? Premakni drsnik in poskusi uganiti!');
 
     dohodkovnafaza = 0;
     $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
@@ -394,7 +394,7 @@ function setUpDohodekButtons() {
 
             dohodkovnafaza = dohodkovnafaza - 1;
 
-            $('.chartlabel-dohodek').text('Kakšno misliš, da je globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja?');
+            $('.chartlabel-dohodek').text('Kakšno misliš, da je globalno plačno razmerje med dohodki povprečnega delavca in direktorja podjetja? Premakni drsnik in poskusi uganiti!');
 
             $('.thedohodkovnabutton').data('dohodkovnafaza', dohodkovnafaza);
 
