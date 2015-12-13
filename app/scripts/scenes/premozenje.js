@@ -291,7 +291,7 @@ function setUpPremozenje() {
     premozenjefaza = 0;
     $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
     $('.premozenjeslider').parent().removeClass('noball');
-    $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)?');
+    $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)? Premakni drsnik in poskusi uganiti!');
 
     // set up slider
     var premozenjeslider = $('.premozenjeslider').slider().on('slide', function (event) {
@@ -582,7 +582,7 @@ function setUpPremozenjeButtons() {
                 $('.content-first-premozenje').removeClass('hidden');
 
                 $('.premozenjeslider').slider('setValue', 99);
-                $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)?');
+                $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)? Premakni drsnik in poskusi uganiti!');
 
                 premozenjefaza = premozenjefaza - 1;
                 $('.thepremozenjebutton').data('premozenjefaza', premozenjefaza);
@@ -603,7 +603,7 @@ function setUpPremozenjeButtons() {
                 //     animateSlider(startvalue - i, i);
                 // }
 
-                $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)?');
+                $('.chartlabel-premozenje').text('Kako misliš, da je razporejeno svetovno premoženje med najbogatejšimi (1%) in ostalim prebivalstvom (99%)? Premakni drsnik in poskusi uganiti!');
 
                 premozenjefaza = premozenjefaza - 1;
 
@@ -792,8 +792,3 @@ function setUpPremozenjeButtons() {
 
     });
 }
-
-// Kako misliš, da je razporejeno premoženje?
-// Takšno je resnično
-// Takole je izgledalo pred krizo
-// Tako bo izgledalo naslednje leto
