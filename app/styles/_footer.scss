@@ -108,8 +108,9 @@
     color: $light-green;
     text-transform: uppercase;
     font-family: 'Titillium Web';
+    text-align: center;
 
-    cursor: pointer;
+    // cursor: pointer;
 }
 .osflogo {
     width: 107px;
@@ -136,4 +137,22 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (max-width: 997px) {
+    .djndlogo, .idslogo, .osflogo {
+        display: block;
+        position: relative;
+        margin: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        margin-top: 10px;
+    }
+
+    .footer-new {
+        border-top: none;
+    }
 }
