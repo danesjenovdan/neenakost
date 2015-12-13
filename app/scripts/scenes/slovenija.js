@@ -115,7 +115,7 @@ function setUpSlovenijaButtons() {
 
                 animateRightPart();
 
-                $('.slovenijaginitext').text('... a se je po bančnem zlomu in gospodarski krizi, ki je izbruhnila leta 2009 pričela vnovično povečevati. Najhujši skok neenakosti v letu 2013 gre pripisati uveljavitvi Zakona o uravnoteženju javnih financ, ki je močno posegel v socialne pravice ljudi ter obstoječe socialne politike.')
+                $('.slovenijaginitext').text('... a se je po bančnem zlomu in gospodarski krizi, ki je izbruhnila leta 2009, pričela vnovično povečevati. Najhujši skok neenakosti v letu 2013 gre pripisati uveljavitvi Zakona o uravnoteženju javnih financ, ki je močno posegel v socialne pravice ljudi ter obstoječe socialne politike.')
 
                 slovenijafaza = slovenijafaza + 1;
 
