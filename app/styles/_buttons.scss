@@ -35,6 +35,39 @@
     float: right;
 }
 
+.theforwardbutton {
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    margin-top: -25px;
+    width: 50px;
+    font-size: 50px;
+    line-height: 38px;
+    z-index: 100;
+}
+.theforwardbutton:hover {
+    top: 50%;
+    left: auto;
+    margin-top: -23px;
+    margin-left: 2px;
+}
+.thebackbutton {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    margin-top: -25px;
+    width: 50px;
+    font-size: 50px;
+    line-height: 38px;
+    z-index: 100;
+}
+.thebackbutton:hover {
+    top: 50%;
+    left: 15px;
+    margin-top: -23px;
+    margin-left: 2px;
+}
+
 .thesocialbutton {
     background-color: $light-blue;
     color: $light-green;
