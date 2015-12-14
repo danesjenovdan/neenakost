@@ -210,7 +210,7 @@ function setUpSlovenijaButtons() {
 
                 destroyLeftPart();
 
-                $('.slovenijaginitext').text('Tolikšen je znašal GINIjev koeficient v Sloveniji leta 2009. Takrat smo, vsaj na papirju, bili precej enakovredna družba.');
+                $('.slovenijaginitext').text('Tolikšna je bila vrednost Ginijevega koeficienta v Sloveniji leta 2009. Takrat smo bili, vsaj na papirju, precej enaka družba.');
 
                 slovenijafaza = slovenijafaza - 1;
 
