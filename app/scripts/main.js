@@ -7,6 +7,18 @@ var ispopoveropen = false;
 
 $(document).ready(function () {
 
+    $(document).on('keyup', function(event) {
+        console.log(event.keyCode);
+        if (event.keyCode === 39) {
+            // next
+            // console.log($('.content').not('.hidden').children('.theforwardbutton'));
+            $('.content').not('.hidden').find('.theforwardbutton').trigger('click');
+        } else if (event.keyCode === 37) {
+            // prev
+            $('.content').not('.hidden').find('.thebackbutton').trigger('click');
+        }
+    });
+
     $('.logo').on('click', function() {
         $('.landing').removeClass('hidden')
         $('.landing').next().addClass('hidden')
