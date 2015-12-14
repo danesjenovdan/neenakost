@@ -57,3 +57,14 @@
     line-height: 20px;
     padding-top: 5px;
 }
+
+.closeme {
+    font-family: $regular;
+    color: $light-green;
+    font-size: 40px;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+
+    cursor: pointer;
+}

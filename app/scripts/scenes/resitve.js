@@ -19,6 +19,10 @@ function setUpResitveButtons() {
         return false;
     });
 
+    $('.closeme').on('click', function() {
+        $(this).parent().addClass('hidden');
+    });
+
     $('.thesdzbutton').on('click', function() {
         $(this).parents('.popover-big').addClass('hidden');
         $('.popover-delavci').removeClass('hidden');
