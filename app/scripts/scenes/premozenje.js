@@ -27,7 +27,7 @@ var linechartdata = {
     labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
     datasets: [
         {
-            label: "Spodnjih 99%",
+            label: "Delež svetovnega premoženja v lasti spodnjih 99%",
             fillColor: 'rgba(255, 255, 255, 0)',
             strokeColor: '#ca485a',
             pointColor: '#ca485a',
@@ -37,7 +37,7 @@ var linechartdata = {
             data: [51.3, 51.6, 53.1, 53.7, 53.7, 53.1, 53.9, 55.3, 55.8, 56, 55.6, 55, 54, 52.3, 51.74, 50.73, 49.72, 48.71, 47.7, 46.69, 45.68]
         },
         {
-            label: "Zgornjih 1%",
+            label: "Delež svetovnega premoženja v lasti zgornjih 1%",
             fillColor: 'rgba(255, 255, 255, 0)',
             strokeColor: '#71d079',
             pointColor: '#71d079',
@@ -61,6 +61,8 @@ function makePremozenjeLinechart(data) {
         'scaleGridLineColor': "rgba(255, 255, 255, 0.6)",
         'scaleLineColor': "rgba(255, 255, 255, 0.6)",
         'scaleFontColor': '#ffffff',
+        'scaleShowLabels': true,
+        'scaleLabel': '<%=value%>%',
         'datasetStrokeWidth': 5
     });
 
