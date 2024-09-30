@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: neenakost
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - neenakost.djnd.si
+        - neenakost.danesjenovdan.si
+      secretName: neenakost-tls
+  rules:
+    - host: neenakost.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: neenakost
+                port:
+                  number: 80
+    - host: neenakost.danesjenovdan.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: neenakost
+                port:
+                  number: 80

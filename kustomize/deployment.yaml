@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neenakost
+  labels:
+    app: neenakost
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neenakost
+  template:
+    metadata:
+      labels:
+        app: neenakost
+    spec:
+      containers:
+        - name: neenakost
+          image: neenakost
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 50Mi
+              cpu: 50m
+            limits:
+              memory: 50Mi
+              cpu: 50m
