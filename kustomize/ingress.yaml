@@ -5,7 +5,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
         - neenakost.djnd.si
@@ -13,7 +13,7 @@ spec:
       secretName: neenakost-tls
   rules:
     - host: neenakost.djnd.si
-      http:
+      http: &http_paths
         paths:
           - path: /
             pathType: Prefix
@@ -23,12 +23,4 @@ spec:
                 port:
                   number: 80
     - host: neenakost.danesjenovdan.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: neenakost
-                port:
-                  number: 80
+      http: *http_paths
