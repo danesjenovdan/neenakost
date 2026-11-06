@@ -8,4 +8,4 @@ resources:
 images:
   - name: neenakost
     newName: rg.fr-par.scw.cloud/djnd/neenakost
-    newTag: 'be859fe5bddec42f5a18ac5ab7041cf258b25241'
+    newTag: 'be859fe5bddec42f5a18ac5ab7041cf258b25241' #
